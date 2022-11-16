@@ -7,7 +7,6 @@ pipeline {
 					agent any
 					steps {
 						sh 'chmod =+x ./jenkins/scripts/deploy.sh'
-						sh 'dos2unix ./jenkins/scripts/deploy.sh'
 						sh './jenkins/scripts/deploy.sh'
 						input message: 'Finished using the web site? (Click "Proceed" to continue)'
 						sh './jenkins/scripts/kill.sh'
